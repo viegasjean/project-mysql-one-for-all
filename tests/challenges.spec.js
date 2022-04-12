@@ -33,7 +33,7 @@ describe('Queries de seleção', () => {
     await importer.import('./desafio1.sql');
     await importer.disconnect();
   });
-  
+
 
   describe('1 - Normalize as tabelas para a 3ª Forma Normal', () => {
     const hasForeignKey = async (table, referencedTable) => {
@@ -311,7 +311,7 @@ describe('Queries de seleção', () => {
     });
   });
 
-  describe('8 - Exibe uma relação de álbuns produzidos pelo artista Walter Phoenix', () => {
+  describe.only('8 - Exibe uma relação de álbuns produzidos pelo artista Walter Phoenix', () => {
     it('Verifica o desafio 8', async () => {
       const challengeQuery = readFileSync('desafio8.sql', 'utf8');
 
